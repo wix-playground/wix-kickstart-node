@@ -37,7 +37,10 @@ CORS determines whether to allow sharing of resources in a cross-origin request 
     
 ![](../static/cors-overview.png)
 
-Link (RU): http://spring-projects.ru/understanding/cors/
+Link: 
+ - Doc (RU): http://spring-projects.ru/understanding/cors/
+ - Presentation (RU): https://www.youtube.com/watch?v=SgFJJBa0AH8
+
 
 ### Authentication and Authorization
 
@@ -68,11 +71,6 @@ Link:
 
  - WebSockets example https://flaviocopes.com/node-websockets/
  - https://medium.com/platform-engineer/web-api-design-35df8167460
-
-
-
-
-
 
 
 ## Self study:

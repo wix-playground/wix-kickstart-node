@@ -2,18 +2,18 @@ const WebSocket = require('ws');
 
 const wss = new WebSocket.Server({ port: 5000 });
 
-wss.on('connection', (ws, req) => {
-  console.log(`Client connected`, req.headers);
+wss.on('connection', (client, req) => {
+  // console.log(`Client connected`, req.headers);
 
-  ws.on('message', message => {
+  client.on('message', message => {
     console.log(`Received message => ${message}`);
-    // ws.send(`Got message: ${message}`);
+    client.send(`Got message: ${message}`);
   });
 
-  ws.send('hi!');
+  client.send('hi!');
 
-  // setInterval(() => {
-  //   ws.send(JSON.stringify({ time: new Date().toISOString() }));
-  // }, 5000);
+  setInterval(() => {
+    client.send(JSON.stringify({ time: Date.now() }));
+  }, 2000);
 
 });
