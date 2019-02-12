@@ -111,12 +111,7 @@ However, a relatively new technology niche cannot meet this demand. The number o
  - Lodash: https://lodash.com/docs/4.17.11
  - Binance API: https://github.com/binance-exchange/binance-official-api-docs
  - Public APIs: https://github.com/toddmotto/public-apis
- - REST API: https://www.codecademy.com/articles/what-is-rest
- - EJS + Express https://scotch.io/tutorials/use-ejs-to-template-your-node-application
- - Mocha https://github.com/mochajs/mocha
- - Supertest https://github.com/visionmedia/supertest
  
-
 ## Self study:
 
  - https://learn.javascript.ru/screencast/nodejs
