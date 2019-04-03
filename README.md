@@ -1,5 +1,10 @@
 # node-wix-kickstart
 
+## Day 0 (1h) [link](day-0/INFO.md)
+
+#### Topic 1: Base JavaScript
+
+
 ## Day 1 (6h) [link](day-1/INFO.md)
 
 #### Topic 1. Introduction to Node.js

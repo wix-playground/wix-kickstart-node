@@ -1,5 +1,10 @@
 # DAY 1 of `node-wix-kickstart` 
 
+## Before all
+
+ - https://www.quora.com/What-is-the-better-web-server-stack-Nginx-or-Apache
+ - https://drupal.stackexchange.com/a/75057
+
 ## The Rise of Node.js programming
 
 ### What is Node.js? 
@@ -104,6 +109,22 @@ However, a relatively new technology niche cannot meet this demand. The number o
  - Link: https://nodejs.org/en/download/package-manager/#alternatives
  - Link: https://brew.sh/
 
+#### Option 1:
+
+```bash
+brew update
+brew install node@10
+brew unlink node
+brew link --force --overwrite node@10
+node -v
+```
+
+#### Option 2:
+
+```bash
+If you need to have this software first in your PATH instead consider running:
+echo 'export PATH="/usr/local/opt/node@10/bin:$PATH"' >> ~/.bash_profile
+```
 
 ## Links for examples:
 
@@ -114,4 +135,5 @@ However, a relatively new technology niche cannot meet this demand. The number o
  
 ## Self study:
 
- - https://learn.javascript.ru/screencast/nodejs
+ - Node.js Best Materials (EN): https://medium.com/@angularminds/best-online-resources-to-learn-nodejs-60f1772f43b1
+ - Node.js Screencast (RU): https://learn.javascript.ru/screencast/nodejs
