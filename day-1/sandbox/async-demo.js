@@ -5,7 +5,7 @@ const fs = require('fs');
 console.log('start script');
 
 setTimeout(() => {
-  console.log('setTimeout happened');
+  console.log('setTimeout 0 happened');
 }, 0);
 
 fs.open(__filename, 'r', (err, fd) => {
@@ -16,15 +16,24 @@ setImmediate(() => {
   console.log('immediate happened');
 });
 
-Promise.resolve().then(() => {
-  console.log('promise happened 1');
-}).then(() => {
-  console.log('promise happened 2');
-});
+Promise.resolve()
+  .then(() => {
+    console.log('promise happened 1');
+  })
+  .then(() => {
+    console.log('promise happened 2');
+  })
+  .then(() => {
+    console.log('promise happened 3');
+  });
 
 new Promise(resolve => {
-  resolve('promise happened 3');
-}).then(console.log);
+  resolve('promise happened 4');
+})
+  .then(console.log)
+  .then(() => {
+    console.log('promise happened 5');
+  });
 
 process.nextTick(() => {
   console.log('nextTick happened');

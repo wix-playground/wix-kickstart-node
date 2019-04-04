@@ -1,0 +1,27 @@
+{
+  "name": "wix-kickstart-node",
+  "version": "1.0.0",
+  "description": "## Day 0 (1h) [link](day-0/INFO.md)",
+  "main": "index.js",
+  "dependencies": {
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "jest": "^24.7.0",
+    "lodash": "^4.17.11",
+    "response-time": "^2.3.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wix-playground/wix-kickstart-node.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wix-playground/wix-kickstart-node/issues"
+  },
+  "homepage": "https://github.com/wix-playground/wix-kickstart-node#readme"
+}

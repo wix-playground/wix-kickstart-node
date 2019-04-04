@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "ls -lah"
+    "test": "jest --no-cache --detectOpenHandles"
   },
   "author": "",
   "license": "ISC",
@@ -14,5 +14,11 @@
     "ejs": "^2.6.1",
     "express": "^4.16.4",
     "lodash": "^4.17.11"
+  },
+  "devDependencies": {
+    "jest": "^24.7.0",
+    "jest-runner-mocha": "^0.6.0",
+    "nock": "^10.0.6",
+    "supertest": "^4.0.2"
   }
 }

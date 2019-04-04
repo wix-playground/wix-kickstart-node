@@ -31,13 +31,13 @@ const fs = require('fs');
 //   console.log('The file has been saved!');
 // });
 
-// const read = util.promisify(fs.readFile);
-//
+//const read = util.promisify(fs.readFile);
+
 // const main = async () => {
 //   console.log('start');
 //
-//   const dataAsync1 = read('/etc/passwd');
-//   const dataAsync2 = read('/etc/passwd');
+//   const dataAsync1 = read('/etc/passwd1');
+//   const dataAsync2 = read('/etc/passwd2');
 //   const dataAsync3 = read('/etc/passwd');
 //
 //   const [a, b, c] = await Promise.all([dataAsync1, dataAsync2, dataAsync3]);
