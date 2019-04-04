@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 
 
-router.post('/', function (req, res) {
+router.post('/', (req, res) => {
 
   const { userId, amount, price } = req.body;
 
@@ -23,7 +23,7 @@ router.post('/', function (req, res) {
 
 });
 
-router.get('/:id', function (req, res) {
+router.get('/:id', (req, res) => {
   res.json({
     id: req.params.id,
     userId: 'test-user-id',
@@ -33,7 +33,7 @@ router.get('/:id', function (req, res) {
   });
 });
 
-router.delete('/:id', function (req, res) {
+router.delete('/:id', (req, res) => {
   res.status(204);
   res.end();
 });
