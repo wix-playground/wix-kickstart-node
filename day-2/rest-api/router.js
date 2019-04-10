@@ -24,9 +24,10 @@ router.post('/', (req, res) => {
 });
 
 router.get('/:id', (req, res) => {
+  const userId = 'test-user-id';
   res.json({
     id: req.params.id,
-    userId: 'test-user-id',
+    userId,
     amount: 10,
     price: 9.99,
     created: new Date().toISOString()

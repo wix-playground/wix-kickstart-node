@@ -1,10 +1,16 @@
 
 schema {
     query: Query
+    mutation: Mutation
 }
 
 type Query {
     book(id: ID!): Book
+    author(name: String!): Author
+}
+
+type Mutation {
+    addAuthorToBook(authorName: String! bookId: [ID!]): Boolean
 }
 
 type Book {
@@ -13,9 +19,17 @@ type Book {
     title: String!
 
     # Author of the book
-    author: String!
+    author: Author!
 
     # Year of the book
     year: Int!
 
 }
+
+type Author {
+
+    # Name of the author
+    name: String!
+
+}
+

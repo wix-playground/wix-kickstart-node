@@ -5,7 +5,6 @@ const fs = require('fs');
 const graphql = require('graphql');
 const express = require('express');
 const expressGraphql = require('express-graphql');
-const cors = require('cors');
 
 const SCHEMA_FILE_NAME = 'schema.graphql';
 
@@ -21,7 +20,6 @@ class GraphQL {
       graphiql: true
     });
 
-    this._router.use(cors());
     this._router.use(api);
   }
 
@@ -38,13 +36,19 @@ class GraphQL {
   _getResolvers() {
     return {
       book: async ({ id }) => {
-
         return {
           title: 'Some book',
-          author: 'Anny Tigo',
+          author: {
+            name: 'Anny Tigo'
+          },
           year: 2109
         };
+      },
 
+      author: ({ name }) => {
+        return {
+          name: 'Anny Tigo'
+        };
       }
     };
   }

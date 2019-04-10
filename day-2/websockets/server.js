@@ -1,9 +1,27 @@
 const WebSocket = require('ws');
 
-const wss = new WebSocket.Server({ port: 5000 });
+const http = require('http');
+
+// Express
+var express = require('express');
+var app = express();
+
+app.get('/test', function (req, res) {
+  res.header('Content-type', 'text/html');
+  return res.end('<h1>Hello, Secure World!</h1>');
+});
+
+
+const server = http.createServer(app);
+
+
+// WS
+const wss = new WebSocket.Server({ server, path: '/ws' });
 
 wss.on('connection', (client, req) => {
-  // console.log(`Client connected`, req.headers);
+  console.log(`Client connected`, req.headers);
+
+  // console.log(client);
 
   client.on('message', message => {
     console.log(`Received message => ${message}`);
@@ -17,3 +35,6 @@ wss.on('connection', (client, req) => {
   }, 2000);
 
 });
+
+
+server.listen(8080);
